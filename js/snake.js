@@ -54,11 +54,11 @@ function run(event) {
     let keyCode = event.keyCode;
     if(keyCode >= 37 && keyCode <= 40) {
         if(isFirst) {
-            move(keyCode);
+            moveLocation(keyCode);
             start();
             isFirst = false;
         } else {
-            move(keyCode);
+            moveLocation(keyCode);
         }
     } else if(keyCode == 27) {
         stop();
@@ -67,11 +67,11 @@ function run(event) {
 
 function start() {
     setItem();
-    interval = setInterval(inInterval, 200);
+    intervalSnake = setInterval(moveSnake, 200);
+    intervalTime = setInterval(setTime, 10);
 }
 
-function inInterval() {
-    setTime();
+function moveSnake() {
     getBodys();
     var headLeft = head.offsetLeft + moveLeft;
     var headTop = head.offsetTop + moveTop;
@@ -86,10 +86,11 @@ function inInterval() {
 }
 
 function stop() {
-    clearInterval(interval);
+    clearInterval(intervalTime);
+    clearInterval(intervalSnake);
 }
 
-function move(keyCode) {
+function moveLocation(keyCode) {
     switch(keyCode) {
         case 37:
             if(moveLeft != 50) {

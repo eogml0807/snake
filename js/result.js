@@ -1,5 +1,5 @@
 function setTime() {
-    var text = (intervalCount*0.2).toFixed(1) + " 초";
+    var text = (intervalCount*0.01).toFixed(2) + " 초";
     time.innerText = text;
     intervalCount++;
 }

@@ -33,9 +33,13 @@
 #time {
     position: absolute;
     background-color: chartreuse;
+    font-size: 30px;
+    text-align: center;
 }
 
 #score {
     position: absolute;
     background-color: gold;
+    font-size: 30px;
+    text-align: center;
 }

@@ -10,7 +10,8 @@ let time = document.getElementById("time");
 let score = document.getElementById("score");
 
 
-let interval;
+let intervalSnake;
+let intervalTime;
 let width;
 let height;
 let spaceX;
