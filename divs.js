@@ -14,6 +14,8 @@ function setBodys() {
 }
 
 function setItem() {
+    item.style.backgroundColor = "black";
+
     while(true) {
         let b = true;
         let randX = Math.round((Math.random()*(space.offsetWidth-50)/50)) * 50;
@@ -28,7 +30,6 @@ function setItem() {
         }
         
         if(b) {
-            console.log(`randX ${randX} randY ${randY}`);
             item.style.left = `${randX}px`;
             item.style.top = `${randY}px`;
             break;

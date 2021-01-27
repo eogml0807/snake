@@ -20,6 +20,7 @@ function hitBody(headLeft, headTop) {
 
 function hitItem() {
     if(head.offsetLeft == item.offsetLeft && head.offsetTop == item.offsetTop) {
+        setScore();
         let div = document.createElement("div");
         div.setAttribute("class", "body");
         div.style.display = "none";
