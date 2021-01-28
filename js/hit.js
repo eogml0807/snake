@@ -1,3 +1,4 @@
+// 벽에 닿는지 확인
 function hitWall(headLeft, headTop) {
     if(headLeft < 0 || headLeft >= space.offsetWidth) {
         return true;
@@ -8,6 +9,7 @@ function hitWall(headLeft, headTop) {
     return false;
 }
 
+// 몸통에 닿는지 확인
 function hitBody(headLeft, headTop) {
     for(var v = 1; v < bodys.length; v++) {
         let body = bodys.item(v);
@@ -18,6 +20,7 @@ function hitBody(headLeft, headTop) {
     return false;
 }
 
+// 아이템에 닿는지 확인
 function hitItem() {
     if(head.offsetLeft == item.offsetLeft && head.offsetTop == item.offsetTop) {
         setScore();

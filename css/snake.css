@@ -1,4 +1,4 @@
-/* space */
+/* 게임 공간 */
 #space {
     position: absolute;
     background-color: #e0e0e0;
@@ -19,13 +19,12 @@
 .body {
     width: 48px;
     height: 48px;
-    background-color: cyan;
     position: absolute;
     border: solid 1px black;
 }
 
 
-/* result */
+/* 게임 결과 */
 #result {
     position: absolute;
 }
